@@ -1,0 +1,29 @@
+<h1>Listing socialmedia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @socialmedia.each do |socialmedium| %>
+      <tr>
+        <td><%= socialmedium.name %></td>
+        <td><%= socialmedium.username %></td>
+        <td><%= socialmedium.password %></td>
+        <td><%= link_to 'Show', socialmedium %></td>
+        <td><%= link_to 'Edit', edit_socialmedium_path(socialmedium) %></td>
+        <td><%= link_to 'Destroy', socialmedium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Socialmedium', new_socialmedium_path %>

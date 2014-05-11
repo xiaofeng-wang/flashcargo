@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @post.message %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @post.image %>
+</p>
+
+<p>
+  <strong>Audio:</strong>
+  <%= @post.audio %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @post.video %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @post.facebook %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @post.twitter %>
+</p>
+
+<p>
+  <strong>Googleplus:</strong>
+  <%= @post.googleplus %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
